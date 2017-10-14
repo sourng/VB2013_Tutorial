@@ -24,3 +24,4 @@ D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmMain.resou
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmUserManagment.resources
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.Resources.resources
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.vbproj.GenerateResource.Cache
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmUserList.resources
