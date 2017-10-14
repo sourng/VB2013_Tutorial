@@ -15,3 +15,12 @@ D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\CUS Tutorial.exe.config
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.exe
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.xml
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.pdb
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\CUS Tutorial.exe
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\CUS Tutorial.pdb
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\CUS Tutorial.xml
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmLesson01.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmLesson02.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmMain.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmUserManagment.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.Resources.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.vbproj.GenerateResource.Cache

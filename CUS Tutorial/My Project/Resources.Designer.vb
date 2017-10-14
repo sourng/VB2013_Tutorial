@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Flyer_Food_And_Drink_1200pix_717pix_Done() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Flyer Food And Drink 1200pix 717pix Done", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property if_36_image_584878() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("if_36_image_584878", resourceCulture)
@@ -96,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property if_image_x_generic_118887() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("if_image-x-generic_118887", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property if_plus_1646001() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("if_plus_1646001", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

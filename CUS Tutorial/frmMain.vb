@@ -5,8 +5,15 @@
 
     End Sub
 
-    Private Sub btnUserManagement_Click(sender As Object, e As EventArgs) Handles btnUserManagement.Click
-        frmUserManagment.Show()
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles tsb_New.Click
 
+    End Sub
+
+    Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel3.Click
+
+    End Sub
+
+    Private Sub tsb_Users_Click(sender As Object, e As EventArgs) Handles tsb_Users.Click
+        frmUserManagment.Show()
     End Sub
 End Class

@@ -15,6 +15,10 @@ CUSTutorial
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.Flyer_Food_And_Drink_1200pix_717pix_Done">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:CUS_Tutorial.My.Resources.Resources.if_36_image_584878">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -28,6 +32,10 @@ CUSTutorial
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:CUS_Tutorial.My.Resources.Resources.if_image_x_generic_118887">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.if_plus_1646001">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

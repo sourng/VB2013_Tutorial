@@ -118,19 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="if_plus_1646001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_plus_1646001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_image-x-generic_118887" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_image-x-generic_118887.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_20170930_162843_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_20170930_162843_41.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_flickr-logo-of-two-dots_1269915" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_flickr-logo-of-two-dots_1269915.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_BT_camera_905563 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_BT_camera_905563 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_flickr-logo-of-two-dots_1269915" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_flickr-logo-of-two-dots_1269915.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_36_image_584878" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_36_image_584878.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_20170930_162843_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_20170930_162843_41.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flyer Food And Drink 1200pix 717pix Done" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flyer Food And Drink 1200pix 717pix Done.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
