@@ -2,6 +2,7 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = True
+        Me.txtCurrentUser.Text = LoginUser
 
     End Sub
 
@@ -14,6 +15,8 @@
     End Sub
 
     Private Sub tsb_Users_Click(sender As Object, e As EventArgs) Handles tsb_Users.Click
-        frmUserManagment.Show()
+        'frmUserManagment.Show()
+        frmUserList.Show()
+
     End Sub
 End Class

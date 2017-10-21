@@ -1,4 +1,5 @@
 ﻿Public Class frmUserManagment
+    Dim UrsImagePath As String
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs)
 
@@ -11,6 +12,15 @@
         Me.cboGender.Text = ""
         Me.txtPassword.Text = ""
         Me.txtEmail.Text = ""
+        Me.txtLName.Text = ""
+        Me.txtBOD.Text = ""
+        Me.txtCommune.Text = ""
+        Me.txtDistrict.Text = ""
+        Me.txtProvince.Text = ""
+        Me.txtPhone.Text = ""
+        Me.txtSalary.Text = ""
+        Me.UserImage.Image = Nothing
+        Me.lblImageFile.Text = "No Image"
         Me.txtID.Text = frmUserList.lv_Users.Items.Count + 1
         Me.txtFName.Focus()
 
@@ -44,8 +54,18 @@
         End If
     End Sub
 
-    Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
+    Private Sub txtFName_LostFocus(sender As Object, e As EventArgs) Handles txtFName.LostFocus
+        If Me.txtFName.Text = "" Then
+            Me.txtFName.BackColor = Color.Red
+            MsgBox("Please Fill in First Name", vbInformation)
+            Me.txtFName.Focus()
+        End If
+    End Sub
 
+    Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
+        If txtFName.Text <> "" Then
+            Me.txtFName.BackColor = Color.White
+        End If
     End Sub
 
     Private Sub cboGender_KeyDown(sender As Object, e As KeyEventArgs) Handles cboGender.KeyDown
@@ -96,7 +116,8 @@
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
         If OFDUserImage.ShowDialog = Windows.Forms.DialogResult.OK Then
             UserImage.Image = Image.FromFile(OFDUserImage.FileName)
-            lblImageFile.Text = OFDUserImage.FileName
+            UrsImagePath = OFDUserImage.FileName
+            lblImageFile.Text = System.IO.Path.GetFileName(OFDUserImage.FileName)
         End If
     End Sub
 
@@ -188,5 +209,18 @@
 
     Private Sub txtSalary_TextChanged(sender As Object, e As EventArgs) Handles txtSalary.TextChanged
 
+    End Sub
+
+    Private Sub frmUserManagment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Clear()
+    End Sub
+
+    Private Sub tsb_Close_Click(sender As Object, e As EventArgs) Handles tsb_Close.Click
+        If Me.txtFName.Text <> "" And Me.txtLName.Text <> "" Then
+            Dim Check As String = MsgBox("Do you want to close?", vbYesNo)
+            If Check = vbYes Then
+                Me.Close()
+            End If
+        End If
     End Sub
 End Class

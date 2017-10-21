@@ -60,6 +60,7 @@ Partial Class frmUserManagment
         Me.tsb_Close = New System.Windows.Forms.ToolStripButton()
         Me.OFDUserImage = New System.Windows.Forms.OpenFileDialog()
         Me.lblImageFile = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -337,6 +338,7 @@ Partial Class frmUserManagment
         '
         'btnSelect
         '
+        Me.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSelect.Image = Global.CUS_Tutorial.My.Resources.Resources.if_flickr_logo_of_two_dots_1269915
         Me.btnSelect.Location = New System.Drawing.Point(670, 242)
         Me.btnSelect.Name = "btnSelect"
@@ -414,6 +416,10 @@ Partial Class frmUserManagment
         Me.lblImageFile.TabIndex = 14
         Me.lblImageFile.Text = "Image file"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'frmUserManagment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -475,4 +481,5 @@ Partial Class frmUserManagment
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents OFDUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents lblImageFile As System.Windows.Forms.Label
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 End Class

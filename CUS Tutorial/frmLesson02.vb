@@ -2,6 +2,7 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If Me.txtUserName.Text = "admin" And txtPassword.Text = "admin" Then
             'MsgBox("You are right !")
+            LoginUser = Me.txtUserName.Text
             frmMain.Show()
 
         Else
