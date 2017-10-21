@@ -26,6 +26,9 @@ Partial Class frmUserManagment
         Me.lbl_FName = New System.Windows.Forms.Label()
         Me.txtFName = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.txtProvince = New System.Windows.Forms.TextBox()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.txtSalary = New System.Windows.Forms.TextBox()
@@ -55,9 +58,8 @@ Partial Class frmUserManagment
         Me.tsb_Save = New System.Windows.Forms.ToolStripButton()
         Me.tsb_Delete = New System.Windows.Forms.ToolStripButton()
         Me.tsb_Close = New System.Windows.Forms.ToolStripButton()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.OFDUserImage = New System.Windows.Forms.OpenFileDialog()
+        Me.lblImageFile = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -113,6 +115,33 @@ Partial Class frmUserManagment
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "បំពេញ​ព័ត៌មាន​របស់​អ្នក​ប្រើ​ប្រាស់​"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(445, 227)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(66, 27)
+        Me.Label14.TabIndex = 24
+        Me.Label14.Text = "ខេត្ត/ក្រុង"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(276, 227)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(77, 27)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "ស្រុក/ខ័ណ្ឌ"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(126, 227)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(71, 27)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "ឃុំ/សង្កាត់"
         '
         'txtProvince
         '
@@ -208,7 +237,7 @@ Partial Class frmUserManagment
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(299, 176)
+        Me.Label8.Location = New System.Drawing.Point(299, 183)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(73, 27)
         Me.Label8.TabIndex = 10
@@ -216,6 +245,7 @@ Partial Class frmUserManagment
         '
         'cboGender
         '
+        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(123, 126)
@@ -225,7 +255,7 @@ Partial Class frmUserManagment
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(123, 167)
+        Me.txtPassword.Location = New System.Drawing.Point(125, 176)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(168, 36)
@@ -250,7 +280,7 @@ Partial Class frmUserManagment
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 172)
+        Me.Label4.Location = New System.Drawing.Point(25, 181)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 27)
         Me.Label4.TabIndex = 6
@@ -322,7 +352,7 @@ Partial Class frmUserManagment
         Me.UserImage.Location = New System.Drawing.Point(654, 77)
         Me.UserImage.Name = "UserImage"
         Me.UserImage.Size = New System.Drawing.Size(132, 159)
-        Me.UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.UserImage.TabIndex = 7
         Me.UserImage.TabStop = False
         '
@@ -370,38 +400,26 @@ Partial Class frmUserManagment
         Me.tsb_Close.Size = New System.Drawing.Size(63, 33)
         Me.tsb_Close.Text = "បិត"
         '
-        'Label12
+        'OFDUserImage
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(126, 227)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(71, 27)
-        Me.Label12.TabIndex = 22
-        Me.Label12.Text = "ឃុំ/សង្កាត់"
+        Me.OFDUserImage.FileName = "ofd_UserImage"
+        Me.OFDUserImage.Filter = "JPEG Files| *.JPG|GIF Files|*.GIF|Windows Bitmaps|*.BMP"
         '
-        'Label13
+        'lblImageFile
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(276, 227)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(77, 27)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "ស្រុក/ខ័ណ្ឌ"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(445, 227)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(66, 27)
-        Me.Label14.TabIndex = 24
-        Me.Label14.Text = "ខេត្ត/ក្រុង"
+        Me.lblImageFile.AutoSize = True
+        Me.lblImageFile.Location = New System.Drawing.Point(684, 300)
+        Me.lblImageFile.Name = "lblImageFile"
+        Me.lblImageFile.Size = New System.Drawing.Size(52, 13)
+        Me.lblImageFile.TabIndex = 14
+        Me.lblImageFile.Text = "Image file"
         '
         'frmUserManagment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(798, 460)
+        Me.Controls.Add(Me.lblImageFile)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnCapture)
@@ -455,4 +473,6 @@ Partial Class frmUserManagment
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents OFDUserImage As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents lblImageFile As System.Windows.Forms.Label
 End Class

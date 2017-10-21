@@ -40,7 +40,7 @@
 
     Private Sub txtUserName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtFName.KeyDown
         If e.KeyCode = Keys.Enter Then
-            cboGender.Focus()
+            txtLName.Focus()
         End If
     End Sub
 
@@ -93,4 +93,100 @@
     End Sub
 
 
+    Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
+        If OFDUserImage.ShowDialog = Windows.Forms.DialogResult.OK Then
+            UserImage.Image = Image.FromFile(OFDUserImage.FileName)
+            lblImageFile.Text = OFDUserImage.FileName
+        End If
+    End Sub
+
+    Private Sub txtLName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtLName.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            cboGender.Focus()
+        End If
+    End Sub
+
+    Private Sub txtLName_TextChanged(sender As Object, e As EventArgs) Handles txtLName.TextChanged
+
+    End Sub
+
+    Private Sub cboGender_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGender.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles txtEmail.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtPassword.Focus()
+        End If
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtBOD.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
+
+    Private Sub txtBOD_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBOD.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtCommune.Focus()
+        End If
+    End Sub
+
+    Private Sub txtCommune_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCommune.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtDistrict.Focus()
+        End If
+    End Sub
+
+    Private Sub txtCommune_TextChanged(sender As Object, e As EventArgs) Handles txtCommune.TextChanged
+
+    End Sub
+
+    Private Sub txtDistrict_KeyDown(sender As Object, e As KeyEventArgs) Handles txtDistrict.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtProvince.Focus()
+        End If
+    End Sub
+
+    Private Sub txtDistrict_TextChanged(sender As Object, e As EventArgs) Handles txtDistrict.TextChanged
+
+    End Sub
+
+    Private Sub txtProvince_KeyDown(sender As Object, e As KeyEventArgs) Handles txtProvince.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtPhone.Focus()
+        End If
+    End Sub
+
+    Private Sub txtProvince_TextChanged(sender As Object, e As EventArgs) Handles txtProvince.TextChanged
+
+    End Sub
+
+    Private Sub txtPhone_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPhone.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            txtSalary.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPhone_TextChanged(sender As Object, e As EventArgs) Handles txtPhone.TextChanged
+
+    End Sub
+
+    Private Sub txtSalary_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSalary.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            tsb_Save.Select()
+        End If
+    End Sub
+
+    Private Sub txtSalary_TextChanged(sender As Object, e As EventArgs) Handles txtSalary.TextChanged
+
+    End Sub
 End Class
