@@ -29,6 +29,7 @@ Partial Class frmLesson02
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnConnect = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -101,12 +102,22 @@ Partial Class frmLesson02
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'btnConnect
+        '
+        Me.btnConnect.Location = New System.Drawing.Point(31, 155)
+        Me.btnConnect.Name = "btnConnect"
+        Me.btnConnect.Size = New System.Drawing.Size(59, 27)
+        Me.btnConnect.TabIndex = 7
+        Me.btnConnect.Text = "connect"
+        Me.btnConnect.UseVisualStyleBackColor = True
+        '
         'frmLesson02
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(419, 194)
+        Me.Controls.Add(Me.btnConnect)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label3)
@@ -130,4 +141,5 @@ Partial Class frmLesson02
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents btnConnect As System.Windows.Forms.Button
 End Class

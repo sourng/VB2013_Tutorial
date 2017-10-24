@@ -46,6 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapture.Designer.vb">
+      <DependentUpon>frmCapture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapture.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLesson02.Designer.vb">
@@ -121,6 +128,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapture.resx">
+      <DependentUpon>frmCapture.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLesson02.resx">
       <DependentUpon>frmLesson02.vb</DependentUpon>

@@ -246,7 +246,6 @@ Partial Class frmUserManagment
         '
         'cboGender
         '
-        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(123, 126)

@@ -1,4 +1,6 @@
-﻿Public Class frmLesson02
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmLesson02
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If Me.txtUserName.Text = "admin" And txtPassword.Text = "admin" Then
             'MsgBox("You are right !")
@@ -21,7 +23,7 @@
 
     Private Sub frmLesson02_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.btnLogin.Enabled = False     'ControlName.Enabled=True/False
-
+        Connect2DB()
     End Sub
 
     Private Sub txtUserName_LostFocus(sender As Object, e As EventArgs) Handles txtUserName.LostFocus
@@ -42,4 +44,11 @@
     Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtUserName.TextChanged
 
     End Sub
+
+    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+        
+        Connect2DB()
+
+    End Sub
+
 End Class

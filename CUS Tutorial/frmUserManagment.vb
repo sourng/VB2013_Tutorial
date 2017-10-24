@@ -55,11 +55,7 @@
     End Sub
 
     Private Sub txtFName_LostFocus(sender As Object, e As EventArgs) Handles txtFName.LostFocus
-        If Me.txtFName.Text = "" Then
-            Me.txtFName.BackColor = Color.Red
-            MsgBox("Please Fill in First Name", vbInformation)
-            Me.txtFName.Focus()
-        End If
+       
     End Sub
 
     Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
@@ -212,7 +208,7 @@
     End Sub
 
     Private Sub frmUserManagment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Clear()
+        'Clear()
     End Sub
 
     Private Sub tsb_Close_Click(sender As Object, e As EventArgs) Handles tsb_Close.Click
