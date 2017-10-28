@@ -15,6 +15,22 @@ CUSTutorial
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.BookingActive">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.BookingOver">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.BusActive">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.BusOver">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:CUS_Tutorial.My.Resources.Resources.Flyer_Food_And_Drink_1200pix_717pix_Done">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -40,6 +56,14 @@ CUSTutorial
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:CUS_Tutorial.My.Resources.Resources.IMG_20170930_162843_41">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.UserActive">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:CUS_Tutorial.My.Resources.Resources.UserOver">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

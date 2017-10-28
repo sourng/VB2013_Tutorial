@@ -26,3 +26,13 @@ D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.Resources.res
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.vbproj.GenerateResource.Cache
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmUserList.resources
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmCapture.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmLogin.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.Camera.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.dll
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Imaging.Formats.dll
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.DirectShow.dll
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.dll
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.xml
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Imaging.Formats.xml
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.xml
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.DirectShow.xml

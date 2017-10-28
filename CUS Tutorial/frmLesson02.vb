@@ -16,7 +16,7 @@ Public Class frmLesson02
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Dim opt As String = MsgBox("Do you want to close?", vbYesNo)
         If opt = vbYes Then
-            Me.Close()
+            End
         End If
 
     End Sub

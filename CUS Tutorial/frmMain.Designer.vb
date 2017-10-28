@@ -25,7 +25,6 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripSplitButton1 = New System.Windows.Forms.ToolStripSplitButton()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.txtCurrentUser = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
@@ -39,14 +38,21 @@ Partial Class frmMain
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.pbBooking = New System.Windows.Forms.PictureBox()
+        Me.pbBus = New System.Windows.Forms.PictureBox()
+        Me.pbUser = New System.Windows.Forms.PictureBox()
         Me.tsb_New = New System.Windows.Forms.ToolStripButton()
         Me.tsbOpen = New System.Windows.Forms.ToolStripButton()
         Me.tsb_Users = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsb_AddUser = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSplitButton1 = New System.Windows.Forms.ToolStripSplitButton()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.pbBooking, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -58,7 +64,7 @@ Partial Class frmMain
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(-6, -3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(905, 52)
+        Me.Label1.Size = New System.Drawing.Size(975, 52)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "CUS Tutorial Managment"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -70,19 +76,9 @@ Partial Class frmMain
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSplitButton1, Me.ToolStripStatusLabel1, Me.txtCurrentUser, Me.ToolStripProgressBar1, Me.ToolStripStatusLabel3})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 396)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(898, 38)
+        Me.StatusStrip1.Size = New System.Drawing.Size(968, 38)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripSplitButton1
-        '
-        Me.ToolStripSplitButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ToolStripSplitButton1.Font = New System.Drawing.Font("Khmer OS Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripSplitButton1.Image = CType(resources.GetObject("ToolStripSplitButton1.Image"), System.Drawing.Image)
-        Me.ToolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripSplitButton1.Name = "ToolStripSplitButton1"
-        Me.ToolStripSplitButton1.Size = New System.Drawing.Size(115, 36)
-        Me.ToolStripSplitButton1.Text = "ចាប់​ផ្តើម"
         '
         'ToolStripStatusLabel1
         '
@@ -112,7 +108,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(898, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(968, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -126,19 +122,19 @@ Partial Class frmMain
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -166,9 +162,41 @@ Partial Class frmMain
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsb_New, Me.tsbOpen, Me.tsb_Users, Me.ToolStripSeparator1, Me.tsb_AddUser})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(898, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(968, 39)
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        '
+        'pbBooking
+        '
+        Me.pbBooking.Image = Global.CUS_Tutorial.My.Resources.Resources.BookingActive
+        Me.pbBooking.Location = New System.Drawing.Point(21, 286)
+        Me.pbBooking.Name = "pbBooking"
+        Me.pbBooking.Size = New System.Drawing.Size(180, 93)
+        Me.pbBooking.TabIndex = 7
+        Me.pbBooking.TabStop = False
+        '
+        'pbBus
+        '
+        Me.pbBus.Image = Global.CUS_Tutorial.My.Resources.Resources.BusActive
+        Me.pbBus.Location = New System.Drawing.Point(21, 187)
+        Me.pbBus.Name = "pbBus"
+        Me.pbBus.Size = New System.Drawing.Size(180, 93)
+        Me.pbBus.TabIndex = 6
+        Me.pbBus.TabStop = False
+        '
+        'pbUser
+        '
+        Me.pbUser.Image = Global.CUS_Tutorial.My.Resources.Resources.UserActive
+        Me.pbUser.Location = New System.Drawing.Point(21, 88)
+        Me.pbUser.Name = "pbUser"
+        Me.pbUser.Size = New System.Drawing.Size(180, 93)
+        Me.pbUser.TabIndex = 5
+        Me.pbUser.TabStop = False
         '
         'tsb_New
         '
@@ -195,11 +223,6 @@ Partial Class frmMain
         Me.tsb_Users.Size = New System.Drawing.Size(146, 36)
         Me.tsb_Users.Text = "គ្រប់គ្រង​អ្នក​ប្រើ"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
-        '
         'tsb_AddUser
         '
         Me.tsb_AddUser.Image = CType(resources.GetObject("tsb_AddUser.Image"), System.Drawing.Image)
@@ -208,13 +231,26 @@ Partial Class frmMain
         Me.tsb_AddUser.Size = New System.Drawing.Size(130, 36)
         Me.tsb_AddUser.Text = "បន្ថែម​អ្នក​ប្រើ"
         '
+        'ToolStripSplitButton1
+        '
+        Me.ToolStripSplitButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ToolStripSplitButton1.Font = New System.Drawing.Font("Khmer OS Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripSplitButton1.Image = CType(resources.GetObject("ToolStripSplitButton1.Image"), System.Drawing.Image)
+        Me.ToolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripSplitButton1.Name = "ToolStripSplitButton1"
+        Me.ToolStripSplitButton1.Size = New System.Drawing.Size(115, 36)
+        Me.ToolStripSplitButton1.Text = "ចាប់​ផ្តើម"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(898, 434)
+        Me.ClientSize = New System.Drawing.Size(968, 434)
+        Me.Controls.Add(Me.pbBooking)
+        Me.Controls.Add(Me.pbBus)
+        Me.Controls.Add(Me.pbUser)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -230,6 +266,9 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.pbBooking, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -255,4 +294,7 @@ Partial Class frmMain
     Friend WithEvents tsb_AddUser As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
     Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents pbUser As System.Windows.Forms.PictureBox
+    Friend WithEvents pbBus As System.Windows.Forms.PictureBox
+    Friend WithEvents pbBooking As System.Windows.Forms.PictureBox
 End Class

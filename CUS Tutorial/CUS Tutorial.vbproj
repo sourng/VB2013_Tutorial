@@ -46,7 +46,26 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats, Version=2.2.4.0, Culture=neutral, PublicKeyToken=8065ed5a639199a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.Formats.2.2.5\lib\AForge.Imaging.Formats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PsdImaging.Interop, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -71,6 +90,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camera.Designer.vb">
+      <DependentUpon>Camera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Camera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +113,12 @@
       <DependentUpon>frmLesson02.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLesson02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.vb">
@@ -108,6 +139,8 @@
     <Compile Include="frmUserManagment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ImageFormat.vb" />
+    <Compile Include="jpg.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -126,6 +159,9 @@
     <Compile Include="M_Public_Variables.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Camera.resx">
+      <DependentUpon>Camera.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLesson02.resx">
       <DependentUpon>frmLesson02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -164,6 +203,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\IMG_20170930_162843_41.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Flyer Food And Drink 1200pix 717pix Done.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BusActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BusOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookingActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookingOver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
