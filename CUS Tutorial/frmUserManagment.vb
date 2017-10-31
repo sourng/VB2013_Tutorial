@@ -1,4 +1,6 @@
-﻿Public Class frmUserManagment
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmUserManagment
     Dim UrsImagePath As String
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs)
@@ -55,7 +57,7 @@
     End Sub
 
     Private Sub txtFName_LostFocus(sender As Object, e As EventArgs) Handles txtFName.LostFocus
-       
+
     End Sub
 
     Private Sub txtUserName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
@@ -88,8 +90,10 @@
             lbl_LName.ForeColor = Color.Red
             Me.txtLName.Focus()
         Else
+
             frmUserList.lv_Users.Items.Add(Me.txtID.Text)
-            frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtFName.Text & " " & Me.txtLName.Text)
+            frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtFName.Text)
+            frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtLName.Text)
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.cboGender.Text)
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtBOD.Text)
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtEmail.Text)
@@ -97,7 +101,37 @@
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtCommune.Text & "," & txtDistrict.Text & "," & txtProvince.Text)
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtPhone.Text)
             frmUserList.lv_Users.Items(j).SubItems.Add(Me.txtSalary.Text)
+
+            'Save Data From form to Database table name tbl_users
+
+            Dim MysqlConn = New MySqlConnection
+            MysqlConn.ConnectionString = My.Settings.Conn
+            Dim READER As MySqlDataReader
+            Try
+                MysqlConn.Open()
+                Dim Query As String
+
+                Query = "INSERT INTO tbl_users (FName, LName, Gender, Email, Pass,BOD, Commune, District, Province,Phone, Salary, Image) values ('" _
+                   & txtFName.Text & "','" & txtLName.Text & "','" & cboGender.Text & "','" & txtEmail.Text & "','" & txtPassword.Text & "','" & txtBOD.Text & "','" _
+                   & txtCommune.Text & "','" & txtDistrict.Text & "','" & txtProvince.Text & "','" & txtPhone.Text & "','" & txtSalary.Text & "','" & lblImageFile.Text & "')"
+
+                'Query = "INSERT INTO table_Name (F1,F2,F3,F4,...,Fn) Value(" & txtFName.Text & ",'" & txtFName.Text & "','" & txtFName.Text & "')"
+
+
+                Dim Command = New MySqlCommand(Query, MysqlConn)
+                READER = Command.ExecuteReader
+                MessageBox.Show("Data Saved")
+                MysqlConn.Close()
+
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                MysqlConn.Dispose()
+            End Try
+
+
             Call Clear()
+
         End If
 
 
@@ -219,4 +253,7 @@
             End If
         End If
     End Sub
+
+ 
+
 End Class

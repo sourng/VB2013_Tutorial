@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=vb_custraning;characterset=utf8")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=vb_training;characterset=utf8")>  _
         Public ReadOnly Property Conn() As String
             Get
                 Return CType(Me("Conn"),String)

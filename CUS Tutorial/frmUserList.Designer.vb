@@ -24,14 +24,6 @@ Partial Class frmUserList
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserList))
         Me.lv_Users = New System.Windows.Forms.ListView()
-        Me.ch_ID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_name = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_gender = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_BOD = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_email = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_Address = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_Phone = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ch_Salary = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.st_Menu = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -46,6 +38,16 @@ Partial Class frmUserList
         Me.tsb_Start = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.txtCurrentUser = New System.Windows.Forms.ToolStripLabel()
+        Me.btnGetData = New System.Windows.Forms.ToolStripButton()
+        Me.No = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.st_Menu.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,7 +57,7 @@ Partial Class frmUserList
         Me.lv_Users.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lv_Users.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ch_ID, Me.ch_name, Me.ch_gender, Me.ch_BOD, Me.ch_email, Me.ch_Address, Me.ch_Phone, Me.ch_Salary})
+        Me.lv_Users.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.No, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
         Me.lv_Users.Font = New System.Drawing.Font("Khmer OS Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lv_Users.FullRowSelect = True
         Me.lv_Users.Location = New System.Drawing.Point(12, 87)
@@ -65,51 +67,11 @@ Partial Class frmUserList
         Me.lv_Users.UseCompatibleStateImageBehavior = False
         Me.lv_Users.View = System.Windows.Forms.View.Details
         '
-        'ch_ID
-        '
-        Me.ch_ID.Text = "ល.រ#"
-        Me.ch_ID.Width = 85
-        '
-        'ch_name
-        '
-        Me.ch_name.Text = "ឈ្មោះអ្នក​ប្រើ"
-        Me.ch_name.Width = 140
-        '
-        'ch_gender
-        '
-        Me.ch_gender.Text = "ភេទ"
-        Me.ch_gender.Width = 77
-        '
-        'ch_BOD
-        '
-        Me.ch_BOD.Text = "ឆ្នាំកំណើត"
-        Me.ch_BOD.Width = 126
-        '
-        'ch_email
-        '
-        Me.ch_email.Text = "អ៊ីម៉េល​"
-        Me.ch_email.Width = 130
-        '
-        'ch_Address
-        '
-        Me.ch_Address.Text = "អាស័យដ្ឋាន"
-        Me.ch_Address.Width = 180
-        '
-        'ch_Phone
-        '
-        Me.ch_Phone.Text = "ទូរស័ព្ទ"
-        Me.ch_Phone.Width = 150
-        '
-        'ch_Salary
-        '
-        Me.ch_Salary.Text = "បៀវត្ស"
-        Me.ch_Salary.Width = 130
-        '
         'st_Menu
         '
         Me.st_Menu.Font = New System.Drawing.Font("Khmer OS Battambang", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.st_Menu.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.st_Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripSeparator4, Me.btnAdd, Me.ToolStripSeparator3, Me.btnEdit, Me.ToolStripSeparator1, Me.btnDelete, Me.ToolStripSeparator2, Me.btnClose})
+        Me.st_Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripSeparator4, Me.btnAdd, Me.ToolStripSeparator3, Me.btnEdit, Me.ToolStripSeparator1, Me.btnDelete, Me.ToolStripSeparator2, Me.btnClose, Me.btnGetData})
         Me.st_Menu.Location = New System.Drawing.Point(0, 0)
         Me.st_Menu.Name = "st_Menu"
         Me.st_Menu.Size = New System.Drawing.Size(872, 68)
@@ -217,6 +179,57 @@ Partial Class frmUserList
         Me.txtCurrentUser.Size = New System.Drawing.Size(98, 38)
         Me.txtCurrentUser.Text = " សេង ស៊ង់​"
         '
+        'btnGetData
+        '
+        Me.btnGetData.Image = CType(resources.GetObject("btnGetData.Image"), System.Drawing.Image)
+        Me.btnGetData.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGetData.Name = "btnGetData"
+        Me.btnGetData.Size = New System.Drawing.Size(132, 65)
+        Me.btnGetData.Text = "ទាញទិន្ន​ន័យ"
+        '
+        'No
+        '
+        Me.No.Text = "#ល.រ"
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "នាមត្រកូល"
+        Me.ColumnHeader1.Width = 160
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "នាមឈ្មោះ"
+        Me.ColumnHeader2.Width = 160
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ភេទ"
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ឆ្នាំកំណើត"
+        Me.ColumnHeader4.Width = 160
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "អ៊ីម៉ែល"
+        Me.ColumnHeader5.Width = 220
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "អាស័យដ្ឋាន"
+        Me.ColumnHeader6.Width = 220
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "ទូរស័ព្ទ"
+        Me.ColumnHeader7.Width = 160
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "ប្រាក់បៀវត្ស"
+        Me.ColumnHeader8.Width = 160
+        '
         'frmUserList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -253,12 +266,14 @@ Partial Class frmUserList
     Friend WithEvents tsb_Start As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
     Friend WithEvents txtCurrentUser As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ch_ID As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_name As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_gender As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_BOD As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_email As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_Address As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_Phone As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ch_Salary As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnGetData As System.Windows.Forms.ToolStripButton
+    Friend WithEvents No As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
 End Class
