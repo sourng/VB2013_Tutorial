@@ -45,10 +45,19 @@ Public Class frmUserList
             If lv_Users.Items(i).Selected = True Then
                 frmUserManagment.txtID.Text = lv_Users.Items(i).Text
                 frmUserManagment.txtFName.Text = lv_Users.Items(i).SubItems(1).Text
-                frmUserManagment.cboGender.Text = lv_Users.Items(i).SubItems(2).Text
-                frmUserManagment.txtBOD.Text = lv_Users.Items(i).SubItems(3).Text
-                frmUserManagment.txtEmail.Text = lv_Users.Items(i).SubItems(4).Text
-                frmUserManagment.txtPassword.Text = lv_Users.Items(i).SubItems(5).Text
+                frmUserManagment.txtLName.Text = lv_Users.Items(i).SubItems(2).Text
+                frmUserManagment.cboGender.Text = lv_Users.Items(i).SubItems(3).Text
+                frmUserManagment.txtBOD.Text = lv_Users.Items(i).SubItems(4).Text
+                frmUserManagment.txtEmail.Text = lv_Users.Items(i).SubItems(5).Text
+                'frmUserManagment.txtPassword.Text = lv_Users.Items(i).SubItems(6).Text
+
+                'frmUserManagment.txtPassword.Text = lv_Users.Items(i).SubItems(6).Text
+                'frmUserManagment.txtPassword.Text = lv_Users.Items(i).SubItems(6).Text
+                frmUserManagment.txtProvince.Text = lv_Users.Items(i).SubItems(6).Text
+
+                frmUserManagment.txtPhone.Text = lv_Users.Items(i).SubItems(7).Text
+                frmUserManagment.txtSalary.Text = lv_Users.Items(i).SubItems(8).Text
+
 
                 frmUserManagment.ShowDialog()
             End If

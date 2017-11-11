@@ -147,8 +147,11 @@ Public Class frmUserManagment
         If OFDUserImage.ShowDialog = Windows.Forms.DialogResult.OK Then
             UserImage.Image = Image.FromFile(OFDUserImage.FileName)
             UrsImagePath = OFDUserImage.FileName
-            lblImageFile.Text = System.IO.Path.GetFileName(OFDUserImage.FileName)
+            lblImageFile.Text = OFDUserImage.FileName 'System.IO.Path.GetFileName(OFDUserImage.FileName)
+            Me.lblUserImageFile.Text = System.IO.Path.GetFileName(OFDUserImage.FileName)
         End If
+
+
     End Sub
 
     Private Sub txtLName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtLName.KeyDown
@@ -256,4 +259,12 @@ Public Class frmUserManagment
 
  
 
+    Private Sub btnCapture_Click(sender As Object, e As EventArgs) Handles btnCapture.Click
+        lblImageFile.Text = ""
+        Camera.ShowDialog()
+        If lblImageFile.Text <> "" Then
+            Me.UserImage.Image = Image.FromFile(lblImageFile.Text)
+        End If
+
+    End Sub
 End Class

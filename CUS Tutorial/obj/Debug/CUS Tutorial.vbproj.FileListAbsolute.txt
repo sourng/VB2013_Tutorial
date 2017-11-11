@@ -38,3 +38,5 @@ D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.xml
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\bin\Debug\AForge.Video.DirectShow.xml
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS Tutorial.vbprojResolveAssemblyReference.cache
 D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmDrapDropForm.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmMoveFiles.resources
+D:\VB.Net @CUS\VB2013_Tutorial\CUS Tutorial\obj\Debug\CUS_Tutorial.frmFunction.resources

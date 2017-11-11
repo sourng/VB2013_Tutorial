@@ -61,6 +61,7 @@ Partial Class frmUserManagment
         Me.OFDUserImage = New System.Windows.Forms.OpenFileDialog()
         Me.lblImageFile = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.lblUserImageFile = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -350,9 +351,9 @@ Partial Class frmUserManagment
         Me.UserImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.UserImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.UserImage.Image = Global.CUS_Tutorial.My.Resources.Resources.if_36_image_584878
-        Me.UserImage.Location = New System.Drawing.Point(654, 77)
+        Me.UserImage.Location = New System.Drawing.Point(651, 77)
         Me.UserImage.Name = "UserImage"
-        Me.UserImage.Size = New System.Drawing.Size(132, 159)
+        Me.UserImage.Size = New System.Drawing.Size(135, 159)
         Me.UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.UserImage.TabIndex = 7
         Me.UserImage.TabStop = False
@@ -409,7 +410,7 @@ Partial Class frmUserManagment
         'lblImageFile
         '
         Me.lblImageFile.AutoSize = True
-        Me.lblImageFile.Location = New System.Drawing.Point(684, 300)
+        Me.lblImageFile.Location = New System.Drawing.Point(648, 300)
         Me.lblImageFile.Name = "lblImageFile"
         Me.lblImageFile.Size = New System.Drawing.Size(52, 13)
         Me.lblImageFile.TabIndex = 14
@@ -419,11 +420,21 @@ Partial Class frmUserManagment
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'lblUserImageFile
+        '
+        Me.lblUserImageFile.AutoSize = True
+        Me.lblUserImageFile.Location = New System.Drawing.Point(648, 326)
+        Me.lblUserImageFile.Name = "lblUserImageFile"
+        Me.lblUserImageFile.Size = New System.Drawing.Size(77, 13)
+        Me.lblUserImageFile.TabIndex = 15
+        Me.lblUserImageFile.Text = "UserImage File"
+        '
         'frmUserManagment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(798, 460)
+        Me.Controls.Add(Me.lblUserImageFile)
         Me.Controls.Add(Me.lblImageFile)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label6)
@@ -481,4 +492,5 @@ Partial Class frmUserManagment
     Friend WithEvents OFDUserImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents lblImageFile As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents lblUserImageFile As System.Windows.Forms.Label
 End Class

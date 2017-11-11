@@ -9,7 +9,12 @@ Public Class Camera
     Dim bmp As Bitmap
 
     Private Sub Camera_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim cameras As VideoCaptureDeviceForm = New VideoCaptureDeviceForm
+        If cameras.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            camera1 = cameras.VideoDevice
+            AddHandler camera1.NewFrame, New NewFrameEventHandler(AddressOf CaptureImage)
+            camera1.Start()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btncamera.Click
@@ -34,8 +39,16 @@ Public Class Camera
         SaveFileDialog1.DefaultExt = ".jpg"
         If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             PictureBox2.Image.Save(SaveFileDialog1.FileName, Drawing.Imaging.ImageFormat.Jpeg)
-        End If
+            'MsgBox("File Name: " & SaveFileDialog1.FileName)
 
+            frmUserManagment.lblImageFile.Text = SaveFileDialog1.FileName
+
+            'ចាប់​ឈ្មោះ​ File ផ្ទេរទៅឲ្យ​ Control lblUserImageFile ក្នុង​ frmUserManagement
+            frmUserManagment.lblUserImageFile.Text = System.IO.Path.GetFileName(SaveFileDialog1.FileName)
+            Me.Close()
+        Else
+            frmUserManagment.lblUserImageFile.Text = ""
+        End If
 
     End Sub
 
@@ -44,6 +57,7 @@ Public Class Camera
     End Sub
 
     Private Sub Camera_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+      
         camera1.Stop()
 
     End Sub
