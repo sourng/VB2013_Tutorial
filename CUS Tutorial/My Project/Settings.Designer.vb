@@ -63,6 +63,23 @@ Namespace My
                 Return CType(Me("Conn"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("<?xml version=""1.0"" encoding=""utf-16""?>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"<ArrayOfString xmlns:xsi=""http://www.w3."& _ 
+            "org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  <s"& _ 
+            "tring>&lt;?xml version=""1.0"" encoding=""utf-16""?&gt;</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  <string>&lt;Arra"& _ 
+            "yOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http:"& _ 
+            "//www.w3.org/2001/XMLSchema""&gt;</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  <string>  &lt;string&gt;0&lt;/strin"& _ 
+            "g&gt;</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  <string>&lt;/ArrayOfString&gt;</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"</ArrayOfString>")>  _
+        Public Property controlLocations() As Global.System.Collections.Specialized.StringCollection
+            Get
+                Return CType(Me("controlLocations"),Global.System.Collections.Specialized.StringCollection)
+            End Get
+            Set
+                Me("controlLocations") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
